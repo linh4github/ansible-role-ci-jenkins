@@ -1,0 +1,10 @@
+---
+ci_jenkins_hostname: "jenkins.box.entwickl.de"
+
+# mounting jenkins workspace
+ci_jenkins_mount_src: "nas.fritz.box:/jenkins"
+ci_jenkins_mount_type: "nfs"
+
+# mounting jenkins thin-backup plugin directory
+ci_jenkins_mount_backup_src: "nas.fritz.box:/jenkins-thin-backup"
+ci_jenkins_mount_backup_type: "nfs"
