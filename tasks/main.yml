@@ -2,7 +2,7 @@
 - name: install essential packages
   apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items:
-    - openjdk-7-jdk
+    - openjdk-7-jre
 
 - name: check if jenkins home directory exists
   stat: path=/var/lib/jenkins
