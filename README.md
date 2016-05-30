@@ -2,11 +2,11 @@
 
 [![Build Status](https://travis-ci.org/elnebuloso/ansible-role-ci-jenkins.svg?branch=master)](https://travis-ci.org/elnebuloso/ansible-role-ci-jenkins)
 
-Jenkins CI Server for Ubuntu Linux Server.
+Jenkins CI Server for Linux Server.
 
 ## Requirements
 
-  - `apache2` should be installed and working (you can use the `elnebuloso.apache2` role to install).
+This role requires Ansible 2.0 or higher, and platform requirements are listed in the metadata file.
 
 ## Role Variables
 
@@ -33,6 +33,10 @@ ci_jenkins_mount_backup_type: "nfs"
   roles:
     - { role: elnebuloso.ci-jenkins }
 ```
+
+## Dependencies
+
+- `apache2` should be installed and working (you can use the `elnebuloso.apache2` role to install).
 
 ##  License
 
