@@ -1,5 +1,9 @@
 # changelog
 
+## 1.4.0
+
+- fix apache2 stat exists
+
 ## 1.3.0
 
 - os specific configuration

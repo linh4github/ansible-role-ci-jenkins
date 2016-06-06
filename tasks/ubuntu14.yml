@@ -32,16 +32,19 @@
     - proxy_http
   notify:
     - ci_jenkins_apache2_restart
+  when: ci_jenkins_apache2_exists.stat.exists == true
 
 - name: create apache2 proxy vhost
   template: src=vhost.conf dest=/etc/apache2/sites-available/100-ci-jenkins.conf
   notify:
     - ci_jenkins_apache2_restart
+  when: ci_jenkins_apache2_exists.stat.exists == true
 
 - name: enable apache2 proxy vhost
   command: a2ensite 100-ci-jenkins.conf creates=/etc/apache2/sites-enabled/100-ci-jenkins.conf
   notify:
     - ci_jenkins_apache2_restart
+  when: ci_jenkins_apache2_exists.stat.exists == true
 
 # mounting
 

@@ -8,4 +8,4 @@
   service:
     name: "{{ci_jenkins_command_apache2_restart}}"
     state: restarted
-  when: ci_jenkins_apache2_exists
+  when: ci_jenkins_apache2_exists.stat.exists == true
