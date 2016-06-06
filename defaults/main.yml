@@ -1,5 +1,6 @@
 ---
-ci_jenkins_hostname: "jenkins.box.entwickl.de"
+ci_jenkins_proxy_port: "80"
+ci_jenkins_proxy_hostname: "jenkins.box.entwickl.de"
 
 # optional mounting jenkins workspace, leave empty for no mounting
 ci_jenkins_mount_src: "nas.fritz.box:/jenkins"

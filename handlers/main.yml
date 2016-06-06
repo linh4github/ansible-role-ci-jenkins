@@ -1,3 +1,11 @@
 ---
+- name: ci_jenkins_jenkins_restart
+  service:
+    name: "{{ci_jenkins_command_jenkins_restart}}"
+    state: restarted
+
 - name: ci_jenkins_apache2_restart
-  service: name=apache2 enabled=yes state=restarted
+  service:
+    name: "{{ci_jenkins_command_apache2_restart}}"
+    state: restarted
+  when: ci_jenkins_apache2_exists

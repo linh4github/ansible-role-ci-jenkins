@@ -13,13 +13,14 @@ This role requires Ansible 2.0 or higher, and platform requirements are listed i
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
 ```
-ci_jenkins_hostname: "jenkins.box.entwickl.de"
+ci_jenkins_proxy_port: "80"
+ci_jenkins_proxy_hostname: "jenkins.box.entwickl.de"
 
-# mounting jenkins workspace
+# optional mounting jenkins workspace, leave empty for no mounting
 ci_jenkins_mount_src: "nas.fritz.box:/jenkins"
 ci_jenkins_mount_type: "nfs"
 
-# mounting jenkins thin-backup plugin directory
+# optional mounting jenkins thin-backup directory, leave empty for no mounting
 ci_jenkins_mount_backup_src: "nas.fritz.box:/jenkins-thin-backup"
 ci_jenkins_mount_backup_type: "nfs"
 ```
@@ -36,7 +37,7 @@ ci_jenkins_mount_backup_type: "nfs"
 
 ## Dependencies
 
-- `apache2` should be installed and working (you can use the `elnebuloso.apache2` role to install).
+None, but if Apache2 is installed, a proxy vhost will be configured.
 
 ##  License
 
