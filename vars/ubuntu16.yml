@@ -1,0 +1,4 @@
+---
+__ci_jenkins_java_package: "openjdk-8-jre-headless"
+__ci_jenkins_command_jenkins_restart: "jenkins"
+__ci_jenkins_command_apache2_restart: "apache2"
